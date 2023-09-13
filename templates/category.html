@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Category Page
+{% endblock title %}
+
+{% block content %}
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">หมวดหมู่รายวิชา</th>
+        </tr>
+        {% for subj in subjs %}
+        <tr>
+            <td><a href="{% url 'details_cate' subj.cate.id %}"> {{subj.cate}}</a></td>
+        </tr>
+        {% endfor %}
+{% endblock content %}

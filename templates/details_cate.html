@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Details Category Page
+{% endblock title %}
+
+{% block content %}
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">รหัสรายวิชา</th>
+            <th scope="col">ชื่อรายวิชา</th>
+            <th scope="col">หน่วยกิต</th>
+            <th scope="col">ภาคการศึกษา</th>
+            <th scope="col">ปีการศึกษา</th>
+        </tr>
+        {% for subjs in subj %}
+        <tr>
+            <th scope="row">{{ forloop.counter }}</th>
+            <td>{{ subjs.subj_code }}</td>
+            <td>{{ subjs.subj_name }}</td>
+            <td>{{ subjs.credit }}</td>
+            <td>{{ subjs.semester }}</td>
+            <td>{{ subjs.year }}</td>
+        </tr>
+        {% endfor %}
+{% endblock content %}

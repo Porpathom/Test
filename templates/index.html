@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Home Page
+{% endblock title %}
+
+{% block content %}
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">รหัสรายวิชา</th>
+        <th scope="col">ชื่อรายวิชา</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for subj in subjs %}
+        <tr>
+            <th scope="row">{{ forloop.counter }}</th>
+            <td><a href="{% url 'details' subj.id %}"> {{subj.subj_code}}</a></td>
+            <td>{{subj.subj_name}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+  </table>
+{% endblock content %}

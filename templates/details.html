@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Details Page
+{% endblock title %}
+
+{% block content %}
+
+<table class="table">
+    <thead>
+      <tr>
+        <td scope="col">รหัสรายวิชา</td>
+        <td>{{ subj.subj_code }}</td>
+      </tr>
+      <tr>
+        <td scope="col">ชื่อรายวิชา</td>
+        <td>{{ subj.subj_name }}</td>
+      </tr>
+      <tr>
+        <td scope="col">หมวดหมู่รายวิชา</td>
+        <td>{{ subj.cate }}</td>
+      </tr>
+      <tr>
+        <td scope="col">หน่วยกิต</td>
+        <td>{{ subj.credit }}</td>
+      </tr>
+      <tr>
+        <td scope="col">ภาคการศึกษา</td>
+        <td>{{ subj.semester }}</td>
+      </tr>
+      <tr>
+        <td scope="col">ปีการศึกษา</td>
+        <td>{{ subj.year }}</td>
+      </tr>
+
+    </thead>
+    <tbody>
+      
+    </tbody>
+  </table>
+{% endblock content %}
