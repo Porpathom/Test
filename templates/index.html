@@ -11,6 +11,7 @@
         <th scope="col">#</th>
         <th scope="col">รหัสรายวิชา</th>
         <th scope="col">ชื่อรายวิชา</th>
+        <th scope="col">ปีการศึกษา</th>
       </tr>
     </thead>
     <tbody>
@@ -19,6 +20,7 @@
             <th scope="row">{{ forloop.counter }}</th>
             <td><a href="{% url 'details' subj.id %}"> {{subj.subj_code}}</a></td>
             <td>{{subj.subj_name}}</td>
+            <td>{{subj.year}}</td>
         </tr>
         {% endfor %}
     </tbody>

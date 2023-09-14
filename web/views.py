@@ -21,8 +21,6 @@ def about(request):
     context = {}
     return render(request, 'about.html', context)
 
-def contact(request):
-    return render(request, 'contact.html')
 
 def details_cate(request, id):
     context = {}

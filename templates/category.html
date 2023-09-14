@@ -5,14 +5,23 @@
 {% endblock title %}
 
 {% block content %}
-<table class="table">
-    <thead>
-        <tr>
-            <th scope="col">หมวดหมู่รายวิชา</th>
-        </tr>
-        {% for subj in subjs %}
-        <tr>
-            <td><a href="{% url 'details_cate' subj.cate.id %}"> {{subj.cate}}</a></td>
-        </tr>
-        {% endfor %}
+        <table class="table">
+            <thead>
+              <tr>
+                
+                <td><a href="/details_cate/1">รายวิชาศึกษาทั่วไป</a></td>
+              </tr>
+              <tr>
+                
+                <td><a href="/details_cate/2">รายวิชาเฉพาะทาง</a></td>
+              </tr>
+              <tr>
+                
+                <td><a href="/details_cate/3">รายวิชาเลือก</a></td>
+              </tr>
+            </thead>
+            <tbody>
+              
+            </tbody>
+          </table>
 {% endblock content %}
