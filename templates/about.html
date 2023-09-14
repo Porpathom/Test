@@ -1,9 +1,63 @@
 {% extends 'base.html' %}
 
 {% block title %}
-    About Page
+    About Me  Page
 {% endblock title %}
 
 {% block content %}
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เกี่ยวกับฉัน</title>
+    <style>
+        /* สไตล์ CSS สำหรับหน้าเว็บ */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #DCDCDC;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h2>ยินดีต้อนรับสู่หน้าเกี่ยวกับฉัน</h2>
+        <p>สวัสดีครับ ฉันชื่อ นายปฐม กล่อมปัญญา รหัสนักศึกษา 6512732104 </p>
+        <p>ฉันศึกษาอยู่ที่มหาวิทยาลัยราชภัฏศรีสะเกษ คณะวิทยาศาสตร์และศิลปศาสตร์
+            สาขาวิทยาการคอมพิวเตอร์ชั้นปีที่ 2
+        </p>
+        <p>หน้านี้จัดทำขึ้นเพื่อแบ่งปันข้อมูลเกี่ยวกับฉัน</p>
+        <h3>รูปภาพของฉัน</h3>
+        <img src="https://scontent.fubp1-1.fna.fbcdn.net/v/t1.6435-9/70270188_104661430933256_1312513620218740736_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=174925&_nc_eui2=AeHITM65n-fYrreyeYeI87tZFCwyZ0Z_TWIULDJnRn9NYjbMj7TPPdnpf35-wi7EfglZ-hMO2DrH4fZLXYonJK5g&_nc_ohc=G6TOj9dNdOoAX-DSoDE&_nc_oc=AQkp16zUSh2InKx10SIG4FN2JdsEefmECaHeLOaydAIqcbgtFsC0oFoIeAC2Li_NBGs&_nc_ht=scontent.fubp1-1.fna&oh=00_AfDaeG6gzknGkGsK-wBoCGvbZ_tpmz978FTKsjruemnLOg&oe=652AAC22" >
+        <br />
+        <br /> 
+        <br />
+        <br /> 
+        <h3>ติดต่อฉัน</h3>
+        <p>คุณสามารถติดต่อฉันได้ทางอีเมลที่ <a href="mailto:stu6512732104@sskru.ac.th">stu6512732104@sskru.ac.th</a></p>
+        <p>หรือผ่านช่องทางสังคมออนไลน์:</p>
+        <ul>
+            <li><a href="https://www.facebook.com/por.pathom.5">Facebook</a></li>
+            <li><a href="https://www.instagram.com/ppporono/">Instagram</a></li>
+            <!-- เพิ่มช่องทางอื่น ๆ ตามที่คุณต้องการ -->
+        </ul>
+    </div>
+</body>
+</html>
 {% endblock content %}
