@@ -1,4 +1,4 @@
-﻿﻿﻿# 🐸	 My Test
+﻿﻿﻿﻿﻿# 🐸	 My Test
 - [My Test](#My-Test)
     - [1. Models](#1-Models)
     - [2. Page](#2-Page)
@@ -61,7 +61,7 @@ class Subj(models.Model):
 ![image](https://github.com/Porpathom/Test/blob/main/image/about.png)
 >**🦎	 [about.html](https://github.com/Porpathom/Test/blob/main/templates/about.html)**
 
-![image]()
+![image](https://github.com/Porpathom/Test/blob/main/image/admin.png)
 >**🦎	 [admin](https://test-indol-three-90.vercel.app/admin/)**
 
 
