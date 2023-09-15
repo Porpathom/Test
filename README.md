@@ -61,6 +61,14 @@ class Subj(models.Model):
 ![image](https://github.com/Porpathom/Test/blob/main/image/about.png)
 >**🦎	 [about.html](https://github.com/Porpathom/Test/blob/main/templates/about.html)**
 
+![image]()
+>**🦎	 [admin](https://test-indol-three-90.vercel.app/admin/)**
+
+
+>**🐛	 user: admin**
+>**🐛	 password: admin**
+        
+
 ## 3. เชื่อมต่อฐานข้อมูลไปยัง Supabase ใน [settings.py]()
 ```py
 DATABASES = {
