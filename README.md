@@ -7,62 +7,74 @@
     - [5. deploy บน Vercel](#5-deploy-บน-Vercel)
     
 ## 1. Models
->**🐢	 Model Category**
+>**🐢	 Model Employ**
 ```py
-class Article(models.Model):
-    head_line = models.CharField(max_length=255)
-    pub_date = models.DateTimeField(auto_now=True)
-    pub_data = models.TextField()
-    reporter = models.ForeignKey(Reporter, on_delete=models.CASCADE, default=1)
+class Employ(models.Model):
+
+    first_name = models.CharField(max_length=255)
+    last_name = models.CharField(max_length=255)
+    sex = models.IntegerField(choices=SEX_CHOICES, default=1)
+    age = models.CharField(max_length=25)
+    education = models.IntegerField(choices=EDUCATION_CHOICES, default=None)
+    dep =models.ForeignKey(Department, on_delete=models.CASCADE,default=None)
+    
     class Meta:
-        verbose_name = "Article"
-        verbose_name_plural = "Article"
+        verbose_name = "Employ"
+        verbose_name_plural = "Employs"
 
     def __str__(self):
-        return self.head_line + self.reporter
-
-    def get_absolute_url(self):
-        return reversed("Article_detail", kwargs={"pk": self.pk})
+        return self.first_name + " "+self.last_name
 ```
->**🐢	 Model Subject**
+>**🐢	 Model Department**
 ```py
-class Subj(models.Model):
-    subj_code = models.CharField(max_length=25)
-    subj_name = models.CharField(max_length=255)
-    credit = models.CharField(max_length=25)
-    semester = models.CharField(max_length=25)
-    year = models.CharField(max_length=25)
-    cate =models.ForeignKey(Cate, on_delete=models.CASCADE,default=None)
+class Department(models.Model):
+
+    name = models.CharField(max_length=50)
 
     class Meta:
-        verbose_name = "Subj"
-        verbose_name_plural = "Subjs"
+        verbose_name = "Department"
+        verbose_name_plural = "Departments"
 
     def __str__(self):
-        return self.subj_name
+        return self.name
+```
+>**🐢	 Choices**
+```py
+SEX_CHOICES = [
+    (1,'ชาย'),
+    (2,'หญิง'),
+]
+
+EDUCATION_CHOICES = [
+    (1,'ปวช.'),
+    (2,'ปวส.'),
+    (3,'ปริญญาตรี'),
+    (4,'สูงกว่าปริญญาตรี')
+]
+
 ```
 ## 2. Page
-![image](https://github.com/Porpathom/Test/blob/main/image/home.png)
->**🦎	 [index.html](https://github.com/Porpathom/Test/blob/main/templates/index.html)**
+![image]()
+>**🦎	 [index.html](https://github.com/Porpathom/Fntest/blob/main/templates/index.html)**
 
 
-![image](https://github.com/Porpathom/Test/blob/main/image/details.png)
->**🦎	 [details.html](https://github.com/Porpathom/Test/blob/main/templates/details.html)**
+![image]()
+>**🦎	 [details.html](https://github.com/Porpathom/Fntest/blob/main/templates/details.html)**
 
 
-![image](https://github.com/Porpathom/Test/blob/main/image/category.png)
->**🦎	 [category.html](https://github.com/Porpathom/Test/blob/main/templates/category.html)**
+![image]()
+>**🦎	 [department.html](https://github.com/Porpathom/Fntest/blob/main/templates/department.html)**
 
 
-![image](https://github.com/Porpathom/Test/blob/main/image/details_category.png)
->**🦎	 [category_details.html](https://github.com/Porpathom/Test/blob/main/templates/details_cate.html)**
+![image]()
+>**🦎	 [department_details.html](https://github.com/Porpathom/Fntest/blob/main/templates/details_dep.html)**
 
 
-![image](https://github.com/Porpathom/Test/blob/main/image/about.png)
->**🦎	 [about.html](https://github.com/Porpathom/Test/blob/main/templates/about.html)**
+![image]()
+>**🦎	 [about.html](https://github.com/Porpathom/Fntest/blob/main/templates/about.html)**
 
-![image](https://github.com/Porpathom/Test/blob/main/image/admin.png)
->**🦎	 [admin](https://test-indol-three-90.vercel.app/admin/)**
+![image]()
+>**🦎	 [admin](https://fntest.vercel.app/admin)**
 
 
 >**🐛	 user: admin**
@@ -78,12 +90,11 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'postgres',
         'USER' :'postgres',
-        'PASSWORD' :'pathom0966788627',
-        'HOST' : 'db.exbttefhfhatmktvkfyj.supabase.co',
+        'PASSWORD' :'???',
+        'HOST' : '???',
         'PORT' : ''
     }
-    
-}
+}   
 ```
 >**🐍 โดยจะมีการใช้คำสั่ง dumpdata ให้ข้อมูลอยู่ในรูปแบบของ JSON และ loaddata เพื่อย้ายไปยังฐานข้อมูลใหม่**
 
@@ -109,7 +120,7 @@ import sys
 
 def main():
     """Run administrative tasks."""
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Test.settings_dev')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Fntest.settings_dev')
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
@@ -125,5 +136,5 @@ if __name__ == '__main__':
     main()
 
 ```
-## 5. deploy บน [Vercel](https://test-indol-three-90.vercel.app/)
-![image](https://github.com/Porpathom/Test/blob/main/image/vercel.png)
+## 5. deploy บน [Vercel](https://fntest.vercel.app/)
+![image]()
