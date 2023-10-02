@@ -54,26 +54,26 @@ EDUCATION_CHOICES = [
 
 ```
 ## 2. Page
-![image]()
+![image](https://github.com/Porpathom/Fntest/blob/main/images/home.png)
 >**🦎	 [index.html](https://github.com/Porpathom/Fntest/blob/main/templates/index.html)**
 
 
-![image]()
+![image](https://github.com/Porpathom/Fntest/blob/main/images/details.png)
 >**🦎	 [details.html](https://github.com/Porpathom/Fntest/blob/main/templates/details.html)**
 
 
-![image]()
+![image](https://github.com/Porpathom/Fntest/blob/main/images/department.png)
 >**🦎	 [department.html](https://github.com/Porpathom/Fntest/blob/main/templates/department.html)**
 
 
-![image]()
+![image](https://github.com/Porpathom/Fntest/blob/main/images/details_dep.png)
 >**🦎	 [department_details.html](https://github.com/Porpathom/Fntest/blob/main/templates/details_dep.html)**
 
 
-![image]()
+![image](https://github.com/Porpathom/Fntest/blob/main/images/about.png)
 >**🦎	 [about.html](https://github.com/Porpathom/Fntest/blob/main/templates/about.html)**
 
-![image]()
+![image](https://github.com/Porpathom/Fntest/blob/main/images/admin.png)
 >**🦎	 [admin](https://fntest.vercel.app/admin)**
 
 
@@ -137,4 +137,4 @@ if __name__ == '__main__':
 
 ```
 ## 5. deploy บน [Vercel](https://fntest.vercel.app/)
-![image]()
+![image](https://github.com/Porpathom/Fntest/blob/main/images/vercel.png)
